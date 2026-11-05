@@ -1,0 +1,1 @@
+{"name":"frame-movie-rating-system","version":"1.0.0","private":true,"type":"module","scripts":{"build":"bash scripts/build-web.sh","test:wasm":"node tests/wasm_tests.mjs"}}

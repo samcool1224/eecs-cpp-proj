@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(FrameMovies LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(frame-console cpp/console.cpp)
+add_executable(core-tests tests/core_tests.cpp)
+enable_testing()
+add_test(NAME core-tests COMMAND core-tests)

@@ -1,1 +1,10 @@
-{"name":"frame-movie-rating-system","version":"1.0.0","private":true,"type":"module","scripts":{"build":"bash scripts/build-web.sh","test:wasm":"node tests/wasm_tests.mjs"}}
+{
+  "name": "movie-rating-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "em++ cpp/wasm_bindings.cpp -std=c++17 -O2 --bind -sMODULARIZE=1 -sEXPORT_ES6=1 -sENVIRONMENT=web,node -sALLOW_MEMORY_GROWTH=1 -sFILESYSTEM=0 -o dist/movie-core.js",
+    "test": "node tests/wasm_tests.mjs && node tests/rating_distribution_tests.mjs"
+  }
+}

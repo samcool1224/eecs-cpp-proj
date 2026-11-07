@@ -14,7 +14,7 @@ bool readNumber(const std::string& prompt,double& result) {
 }
 bool readText(const std::string& prompt,std::string& text){std::cout<<prompt;return bool(std::getline(std::cin,text));}
 void display(const frame::Catalog& catalog) {
-    std::cout<<"\nFRAME | MOVIE RATING SYSTEM\n"<<std::string(76,'-')<<'\n';
+    std::cout<<"\nMOVIE RATING SYSTEM\n"<<std::string(76,'-')<<'\n';
     double sum=0;int rated=0;
     // Loop through multiple objects and display all required movie information.
     for(const auto& movie:catalog.movies()) {
